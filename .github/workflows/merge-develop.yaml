@@ -1,8 +1,8 @@
 name: Merge branch
-# on: [push]
-on:
-  issue_comment:
-    types: [created, edited]
+on: [push]
+# on:
+#   issue_comment:
+#     types: [created, edited]
 
 jobs:
   merge-branch:

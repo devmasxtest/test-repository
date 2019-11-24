@@ -1,7 +1,7 @@
 name: Merge branch
 # on: [push]
 on:
-  issue_comment:
+  issues:
     types: [labeled]
 
 jobs:

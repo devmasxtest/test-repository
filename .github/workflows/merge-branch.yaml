@@ -1,6 +1,6 @@
 name: Merge branch
 on:
-  issues:
+  pull_request:
     types: [labeled]
 
 jobs:

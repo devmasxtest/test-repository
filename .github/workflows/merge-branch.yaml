@@ -8,20 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-<<<<<<< HEAD:.github/workflows/merge-develop.yaml
-=======
-      - name: "PR comment"
-        run: "cat ${GITHUB_EVENT_PATH}"
->>>>>>> e0d7ef58b1b38d35cf3033807d5dfc53c0e4555b:.github/workflows/merge-branch.yaml
       - name: Merge to develop
         uses: devmasxtest/merge-command-action@master
         with:
-          type: labeled
-<<<<<<< HEAD:.github/workflows/merge-develop.yaml
-          label_name: merged in develop
-=======
-          label_name: "merged in develop"
->>>>>>> e0d7ef58b1b38d35cf3033807d5dfc53c0e4555b:.github/workflows/merge-branch.yaml
+          label_name: 'merged in develop'
           base_branch: develop
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

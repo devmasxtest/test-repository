@@ -12,11 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: 'PR comment'
-        run: 'cat ${GITHUB_EVENT_PATH}'
       - name: Merge to develop
         uses: devmasxtest/merge-command-action@master
         with:
+          type: labeled
+          label_name: merged in develop
           base_branch: develop
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

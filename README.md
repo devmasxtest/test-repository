@@ -1,15 +1,3 @@
 # test-repository
 
-test
-.
-.
-.
-.
-.
-.
-.
-.
-
-.
-.
-.
+Staging

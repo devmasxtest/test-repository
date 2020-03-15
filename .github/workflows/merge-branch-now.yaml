@@ -2,7 +2,7 @@ name: Merge branch now
 on:
   push:
     branches:
-      - 'release/*'
+      - 'release/v2'
 
 jobs:
   merge-branch:

@@ -1,4 +1,4 @@
-name: Merge branch
+name: Merge branch now
 on:
   push:
     branches:
@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Merge to master
-        uses: devmasxtest/merge-command-action@master
+        uses: devmasx/merge-command-action@master
         with:
           type: now
           base_branch: master

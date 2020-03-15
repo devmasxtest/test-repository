@@ -12,6 +12,6 @@ jobs:
         uses: devmasx/merge-branch@debug
         with:
           label_name: 'merged in develop'
-          base_branch: develop
+          target_branch: develop
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

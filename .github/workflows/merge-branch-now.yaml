@@ -13,6 +13,6 @@ jobs:
         uses: devmasx/merge-branch@debug
         with:
           type: now
-          base_branch: master
+          target_branch: master
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

@@ -1,3 +1,3 @@
 # test-repository
 
-Staging
+V2

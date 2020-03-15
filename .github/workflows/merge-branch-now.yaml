@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Merge to master
-        uses: devmasx/merge-branch@debug
+        uses: devmasx/merge-branch@develop
         with:
           type: now
           target_branch: master

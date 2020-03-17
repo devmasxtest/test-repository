@@ -1,4 +1,4 @@
 # test-repository
 
 V2
-.
+..

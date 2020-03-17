@@ -8,7 +8,7 @@ jobs:
   merge-branch:
     runs-on: ubuntu-latest
     steps:
-      - uses: devmasx/coverage-check-action@debug
+      - uses: devmasx/coverage-check-action@parse-lcov-ruby
         with:
           type: lcov
           result_path: coverage/example.lcov

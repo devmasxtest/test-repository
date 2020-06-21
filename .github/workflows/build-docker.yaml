@@ -12,3 +12,4 @@ jobs:
       - uses: devmasx/cached-docker-build-push@develop
         with:
           image_name: devmasx/project-name
+          image_tag: ${{ env.GITHUB_SHA }}

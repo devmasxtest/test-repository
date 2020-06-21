@@ -13,3 +13,4 @@ jobs:
         with:
           image_name: devmasx/project-name
           image_tag: ${{ env.GITHUB_SHA }}
+          print: 'true'

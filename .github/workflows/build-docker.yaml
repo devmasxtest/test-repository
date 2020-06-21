@@ -1,0 +1,14 @@
+name: Merge branch labeled
+on:
+  push:
+    branches:
+      - 'cached-docker'
+
+jobs:
+  cached-docker-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: devmasx/cached-docker-build-push@develop
+        with:
+          image_name: devmasx/project-name

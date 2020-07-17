@@ -1,8 +1,4 @@
 name: Merge branch now
-on:
-  push:
-    branches:
-      - 'staging'
 
 jobs:
   merge-branch:
@@ -10,9 +6,10 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Merge to master
-        uses: devmasx/merge-branch@develop
+        uses: devmasx/merge-branch@input-head-to-merge
         with:
           type: now
           target_branch: master
+          head_to_merge: staging
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

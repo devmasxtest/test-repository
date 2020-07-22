@@ -1,0 +1,14 @@
+name: 'Example action'
+description: ''
+author: Miguel Savignano
+inputs:
+  name:
+    required: false
+    default: 'World'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'git-merge'
+  color: 'purple'

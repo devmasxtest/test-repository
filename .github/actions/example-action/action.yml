@@ -2,9 +2,8 @@ name: 'Example action'
 description: ''
 author: Miguel Savignano
 inputs:
-  name:
-    required: false
-    default: 'World'
+  github_token:
+    required: true
 
 runs:
   using: 'docker'

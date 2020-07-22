@@ -13,4 +13,4 @@ jobs:
       - name: Use local example-action
         uses: ./.github/actions/example-action
         with:
-          github_token: ${{ github.token }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}

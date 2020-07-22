@@ -2,17 +2,33 @@ name: Merge branch now
 on:
   push:
     branches:
-      - 'staging'
-
+      - "*"
 jobs:
   merge-branch:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: Merge to master
-        uses: devmasx/merge-branch@develop
+      - name: staging -> master
+        uses: devmasx/merge-branch@input-head-to-merge
         with:
           type: now
           target_branch: master
+          head_to_merge: staging
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: master -> develop
+        uses: devmasx/merge-branch@input-head-to-merge
+        with:
+          type: now
+          target_branch: develop
+          head_to_merge: master
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: develop -> staging
+        uses: devmasx/merge-branch@input-head-to-merge
+        with:
+          type: now
+          target_branch: staging
+          head_to_merge: develop
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

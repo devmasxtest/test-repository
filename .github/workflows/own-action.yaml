@@ -1,0 +1,13 @@
+name: Example
+on:
+  push:
+    branches:
+      - 'local-action'
+
+jobs:
+  example_job:
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use local example-action
+        uses: ./.github/actions/example-action

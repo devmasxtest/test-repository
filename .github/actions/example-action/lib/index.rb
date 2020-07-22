@@ -21,6 +21,11 @@ client.patch("/repos/#{ENV['GITHUB_REPOSITORY']}/check-runs/#{check_id}", {
   conclusion: 'success',
   output: {
     title: CHECK_NAME,
+    images: [{
+      alt: 'Unicorn error',
+      image_url: 'https://user-images.githubusercontent.com/3982052/61085018-a44fdd80-a405-11e9-91aa-99adb8b3a5b3.png',
+      caption: 'caption'
+    }],
     summary: 'Summary',
     annotations: []
   }

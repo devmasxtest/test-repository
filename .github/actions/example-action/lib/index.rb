@@ -8,7 +8,7 @@ CHECK_NAME = 'Example'
 client = GithubClient.new(ENV['GITHUB_TOKEN'])
 check_id = client.post("/repos/#{ENV['GITHUB_REPOSITORY']}/check-runs", {
   name: CHECK_NAME,
-  head_sha: ENV['GITHUB_TOKEN'],
+  head_sha: ENV['INPUT_GITHUB_TOKEN'],
   status: 'in_progress',
   started_at: Time.now.iso8601
 })['id']

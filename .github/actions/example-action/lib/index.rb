@@ -18,7 +18,7 @@ client.patch("/repos/#{ENV['GITHUB_REPOSITORY']}/check-runs/#{check_id}", {
   head_sha: ENV['GITHUB_SHA'],
   status: 'completed',
   completed_at: Time.now.iso8601,
-  conclusion: 'action_required',
+  conclusion: 'failure',
   output: {
     title: CHECK_NAME,
     images: [{

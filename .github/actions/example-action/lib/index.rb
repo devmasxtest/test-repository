@@ -3,7 +3,7 @@ require 'net/http'
 require 'json'
 require 'time'
 require_relative './github_client'
-CHECK_NAME = 'Example'
+CHECK_NAME = 'example_job'
 
 client = GithubClient.new(ENV['INPUT_GITHUB_TOKEN'])
 check_id = client.post("/repos/#{ENV['GITHUB_REPOSITORY']}/check-runs", {

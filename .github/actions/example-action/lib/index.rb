@@ -32,3 +32,5 @@ client.patch("/repos/#{ENV['GITHUB_REPOSITORY']}/check-runs/#{check_id}", {
 })
 
 puts "Hello world"
+exit 1
+

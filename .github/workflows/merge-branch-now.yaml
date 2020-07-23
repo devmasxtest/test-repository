@@ -2,7 +2,7 @@ name: Merge branch now
 on:
   push:
     branches:
-      - "*"
+      - "master"
 jobs:
   merge-branch:
     runs-on: ubuntu-latest

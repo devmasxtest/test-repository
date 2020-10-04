@@ -14,5 +14,4 @@ jobs:
         with:
           type: now
           target_branch: master
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          github_token: ${{ github.token }}

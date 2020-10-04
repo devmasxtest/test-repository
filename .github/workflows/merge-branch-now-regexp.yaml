@@ -10,9 +10,9 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Merge to master
-        uses: devmasx/merge-branch@develop
+        uses: devmasx/merge-branch@master
         with:
           type: now
+          head_to_merge: release/v4
           target_branch: master
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          github_token: ${{ github.token }}

@@ -13,7 +13,7 @@ jobs:
         with:
           type: now
           target_branch: master
-          head_to_merge: staging
+          from_branch: staging
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - name: master -> develop
@@ -21,7 +21,7 @@ jobs:
         with:
           type: now
           target_branch: develop
-          head_to_merge: master
+          from_branch: master
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - name: develop -> staging
@@ -29,6 +29,6 @@ jobs:
         with:
           type: now
           target_branch: staging
-          head_to_merge: develop
+          from_branch: develop
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

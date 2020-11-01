@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: staging -> master
-        uses: devmasx/merge-branch@input-head-to-merge
+        uses: devmasx/merge-branch@fix-env-empty
         with:
           type: now
           target_branch: master
@@ -17,7 +17,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - name: master -> develop
-        uses: devmasx/merge-branch@input-head-to-merge
+        uses: devmasx/merge-branch@fix-env-empty
         with:
           type: now
           target_branch: develop
@@ -25,7 +25,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - name: develop -> staging
-        uses: devmasx/merge-branch@input-head-to-merge
+        uses: devmasx/merge-branch@fix-env-empty
         with:
           type: now
           target_branch: staging

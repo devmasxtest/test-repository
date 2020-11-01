@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Merge to develop
-        uses: devmasx/merge-branch@develop
+        uses: devmasx/merge-branch@fix-env-empty
         with:
           label_name: 'merged in develop'
           target_branch: develop

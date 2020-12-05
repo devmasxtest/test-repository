@@ -1,0 +1,18 @@
+name: Check coverage
+on:
+  push:
+    branches:
+      - 'master'
+
+jobs:
+  merge-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - run: |
+          curl \
+            -X POST \
+            -H "Accept: application/vnd.github.groot-preview+json" \
+            -H "Authorization: token ${{ github.token }}" \
+            https://api.github.com/repos/devmasxtest/test-repository/check-runs \
+            -d '{ "name": "CHECK_EXAMPLE", "head_sha": "0cfb5a822b74307d808508b33c4ad874cc0713ae", "status": "in_progress", "started_at": "2020-12-05T17:23:53+01:00" }'

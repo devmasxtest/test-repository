@@ -15,4 +15,4 @@ jobs:
             -H "Accept: application/vnd.github.groot-preview+json" \
             -H "Authorization: token ${{ github.token }}" \
             https://api.github.com/repos/devmasxtest/test-repository/check-runs \
-            -d '{ "name": "CHECK_EXAMPLE1", "head_sha": "0cfb5a822b74307d808508b33c4ad874cc0713ae", "status": "completed", "started_at": "2020-12-05T17:23:53+01:00" }'
+            -d '{ "name": "CHECK_EXAMPLE1", "head_sha": "15996c99aa247475e152ad8f02155998600f6d10", "status": "in_progress", "started_at": "2020-12-05T17:23:53+01:00" }'

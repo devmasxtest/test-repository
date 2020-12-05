@@ -1,17 +1,16 @@
-name: Merge branch labeled
+name: check mege branch
 on:
-  pull_request:
-    types: [labeled]
-
+  push:
+    branches:
+      - 'staging'
 jobs:
-  merge-branch:
+ set-merged-label:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: Merge to develop
-        uses: devmasx/merge-branch@fix-env-empty
-        with:
-          label_name: 'merged in develop'
-          target_branch: develop
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - run: echo "Hello world"
+      # - name: check merge in staging
+      #   uses: devmasx/merge-branch@develop
+      #   with:
+      #     type: 'check_merged'
+      #     github_token: ${{ github.token }}

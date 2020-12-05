@@ -8,3 +8,5 @@ sync multiple branchs
 .....
 
 Some change in develop
+
+second change in develop

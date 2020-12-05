@@ -9,8 +9,8 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - run: echo "Hello world"
-      # - name: check merge in staging
-      #   uses: devmasx/merge-branch@develop
-      #   with:
-      #     type: 'check_merged'
-      #     github_token: ${{ github.token }}
+      - name: check merge in staging
+        uses: devmasx/merge-branch@develop
+        with:
+          type: 'merged-label'
+          github_token: ${{ github.token }}

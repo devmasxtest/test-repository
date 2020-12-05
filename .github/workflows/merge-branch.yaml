@@ -13,4 +13,5 @@ jobs:
         uses: devmasx/merge-branch@develop
         with:
           type: 'merged-label'
+          label_name: merged-in-staging
           github_token: ${{ github.token }}

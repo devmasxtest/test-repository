@@ -1,4 +1,4 @@
-name: check mege branch
+name: Set merged label on staging
 on:
   push:
     branches:
@@ -8,8 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - run: echo "Hello world"
-      - name: check merge in staging
+      - name: Set merged label on staging
         uses: devmasx/merge-branch@develop
         with:
           type: 'merged-label'

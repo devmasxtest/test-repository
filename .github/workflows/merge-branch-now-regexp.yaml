@@ -13,7 +13,7 @@ jobs:
       - run: echo ${{ github.ref }}
       - run: echo ${{ github.event.action }}
       - run: echo ${{ github.event.label.name }}
-      - run: echo ${{ github.event.pull_request.base.head.ref }}
+      - run: echo ${{ github.event.pull_request.head.ref }}
       - run: cat $GITHUB_EVENT_PATH
       - name: Merge to staging
         if: contains(github.ref, 'refs/release/')

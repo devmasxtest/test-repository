@@ -1,9 +1,10 @@
-name: Merge branch now
+name: Merge branch labeled
 on:
-  push:
+  pull_request:
+    types: [labeled]
     branches:
-      - 'release/*'
-
+      - release/*
+      - hotfix/*
 jobs:
   merge-branch:
     runs-on: ubuntu-latest

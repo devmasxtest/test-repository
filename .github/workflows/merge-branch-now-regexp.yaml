@@ -11,12 +11,14 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - run: echo ${{ github.ref }}
-      - run: echo ${{ github.action }}
-      - run: echo ${{ github.label.name }}
-      - run: echo ${{ github.head.ref }}
+      - run: echo ${{ github.event.action }}
+      # - run: echo ${{ github.label.name }}
+      # - run: echo ${{ github.event.pull_request.label.name }}
+      - run: echo ${{ github.event.label.name }}
+      - run: echo ${{ github.event.head.ref }}
       - run: git branch
       - run: cat $GITHUB_EVENT_PATH
-      - name: Merge to master
+      - name: Merge to staging
         if: contains(github.ref, 'refs/release/')
         uses: devmasx/merge-branch@v1.3.1
         with:

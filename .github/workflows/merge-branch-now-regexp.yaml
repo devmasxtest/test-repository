@@ -11,6 +11,9 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - run: echo ${{ github.ref }}
+      - run: echo ${{ github.action }}
+      - run: echo git branch
+      - run: cat $GITHUB_EVENT_PATH
       - name: Merge to master
         if: contains(github.ref, 'refs/release/')
         uses: devmasx/merge-branch@v1.3.1

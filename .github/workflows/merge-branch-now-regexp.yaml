@@ -16,7 +16,7 @@ jobs:
       - run: echo ${{ github.event.pull_request.head.ref }}
       - run: cat $GITHUB_EVENT_PATH
       - name: Merge to staging
-        if: contains(github.event.pull_request.head.ref, 'release/')
+        if: contains(github.event.pull_request.head.ref, 'release/') || contains(github.event.pull_request.head.ref, 'hotfix/')
         uses: devmasx/merge-branch@v1.3.1
         with:
           label_name: ready to launch

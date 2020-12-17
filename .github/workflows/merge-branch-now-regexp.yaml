@@ -12,11 +12,8 @@ jobs:
       - uses: actions/checkout@master
       - run: echo ${{ github.ref }}
       - run: echo ${{ github.event.action }}
-      # - run: echo ${{ github.label.name }}
-      # - run: echo ${{ github.event.pull_request.label.name }}
       - run: echo ${{ github.event.label.name }}
-      - run: echo ${{ github.event.head.ref }}
-      - run: git branch
+      - run: echo ${{ github.event.pull_request.base.head.ref }}
       - run: cat $GITHUB_EVENT_PATH
       - name: Merge to staging
         if: contains(github.ref, 'refs/release/')

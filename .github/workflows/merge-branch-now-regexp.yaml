@@ -6,19 +6,13 @@ on:
     #   - release/*
     #   - hotfix/*
 jobs:
-  print:
-    if: contains(github.ref, 'refs/release/')
+  merge-branch:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
       - run: echo ${{ github.ref }}
-
-  merge-branch:
-    if: contains(github.ref, 'refs/release/')
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
       - name: Merge to master
+        if: contains(github.ref, 'refs/release/')
         uses: devmasx/merge-branch@v1.3.1
         with:
           label_name: ready to launch

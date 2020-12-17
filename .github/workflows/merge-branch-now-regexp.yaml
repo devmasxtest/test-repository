@@ -10,8 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Merge to master
-        uses: devmasx/merge-branch@develop
+        uses: devmasx/merge-branch@v1.3.1
         with:
-          type: now
+          label_name: ready to launch
           target_branch: master
           github_token: ${{ github.token }}

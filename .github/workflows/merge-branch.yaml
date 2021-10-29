@@ -7,10 +7,10 @@ jobs:
  set-merged-label:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@action-logs
       - run: echo "Hello world"
       - name: Merge staging -> uat
-        uses: devmasx/merge-branch@master
+        uses: devmasx/merge-branch@action-logs
         with:
           type: not_found
           from_branch: master

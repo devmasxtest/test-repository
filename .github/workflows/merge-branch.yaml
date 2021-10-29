@@ -2,15 +2,17 @@ name: check mege branch
 on:
   push:
     branches:
-      - 'staging'
+      - '*'
 jobs:
  set-merged-label:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
       - run: echo "Hello world"
-      # - name: check merge in staging
-      #   uses: devmasx/merge-branch@develop
-      #   with:
-      #     type: 'check_merged'
-      #     github_token: ${{ github.token }}
+      - name: Merge staging -> uat
+        uses: devmasx/merge-branch@master
+        with:
+          type: now
+          from_branch: master
+          target_branch: staging
+          github_token: ${{ github.token }}
